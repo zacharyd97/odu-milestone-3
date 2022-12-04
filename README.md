@@ -24,3 +24,27 @@ Addresses any outstanding bugs or unfinished functionality.
 ### planing part
 
 it uses the spotify api and a backend to connect users based on prefrence to the type of music they like.
+
+As a user have a account login with password and account info to save their data
+
+as a user want a app that tracks my music prefrence and recomends people based off of my music taste
+
+as a user have a profile page that displays info about user to share with friends 
+
+as a user have a like dislike for types of music ,individual songs or bands
+
+as a user i want to see a feed of people with similar music taste
+
+as a user i need an ability to make posts about music or bands
+
+ability to share and rate playlists for people.
+
+a way for users to share music that they created 
+
+a way for users intrested in making music to come together 
+
+a way to track and post upcoming events and concersts to followers
+
+### future plans 
+
+
