@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+### Social media app that uses music to connect like minded users
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### project by Zach, Caleb and Owen
 
-## Available Scripts
+### Requirements 
 
-In the project directory, you can run:
+Your back-end uses Python or Node.
+Your back-end uses Flask or Django (Python) or Express (Node).
+Your front-end may use React, or another front-end framework (e.g., Vue, Angular), or a template language (EJS, Pug, Handlebars).
+Your app must have a database that has at least two tables (SQL) or collections (Mongo).
+Your database must support at least one type of database relationship between tables/collections.
+This can be embedded or relational data in Mongo (An embedded collection will qualify as your second collection).
+This can be a 1:M (one-to-many) or N:M (many-to-many) relationship between SQL tables.
+Your app uses an ORM or ODM to interact with your database (e.g., Sequelize, PyMongo, SQLAlchemy, TypeORM, Mongoose).
+This app must run in a web browser.
+Your website should be responsive to screen size changes.
+This means that your website should be viewable and usable on a mobile device or tablet via an internet browser. Text shouldn't be super tiny and layouts shouldn't exceed the screen size on smaller screens.
+The app should have a README.md file including the following:
+Describes the inspiration for the application.
+Describes how to use the application.
+Lists the technologies used to build the application.
+Addresses any outstanding bugs or unfinished functionality.
 
-### `npm start`
+### planing part
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+it uses the spotify api and a backend to connect users based on prefrence to the type of music they like.
