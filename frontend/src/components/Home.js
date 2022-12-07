@@ -11,15 +11,17 @@ function Home() {
                     <li>Bands</li>
                 </ul>
             </nav>
-            <div>
-                <h2>Friends</h2>
-            </div>
-            <div>
-                <h2>Main Feed</h2>
-            </div>
-            <div>
-                <h2>Chats</h2>
-            </div>
+            <section>
+                <div>
+                    <h2>Friends</h2>
+                </div>
+                <div>
+                    <h2>Main Feed</h2>
+                </div>
+                <div>
+                    <h2>Chats</h2>
+                </div>
+            </section>
         </main>
     )
 }
