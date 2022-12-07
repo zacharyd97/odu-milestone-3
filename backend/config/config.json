@@ -9,15 +9,15 @@
   "test": {
     "username": "postgres",
     "password": "postgres",
-    "database": "milestone3",
+    "database": "database_test",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "mysql"
   },
   "production": {
     "username": "postgres",
     "password": "postgres",
-    "database": "milestone3",
+    "database": "database_production",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "mysql"
   }
 }
