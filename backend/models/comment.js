@@ -15,13 +15,22 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Comment.init({
-    comment_id: DataTypes.INTEGER,
+    comment_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
     pageId: DataTypes.INTEGER,
     authorId: DataTypes.INTEGER,
-    content: DataTypes.STRING
+    content: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
   }, {
     sequelize,
     modelName: 'Comment',
+    tableName: 'comments',
+    timestamps: false
   });
   return Comment;
 };
