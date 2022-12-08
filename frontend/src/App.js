@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Home from "./components/Home"
+import Navigation from './components/Navigation';
 
 
 function App() {
@@ -8,10 +9,9 @@ function App() {
 
   return (
     <div className='App'>
+      <Navigation />
       <BrowserRouter>
-
         <div className='Display'>
-
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
