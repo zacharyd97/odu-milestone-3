@@ -10,14 +10,25 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       user_name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       user_password: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       email: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      image_url: {
         type: Sequelize.STRING
+      },
+      role: {
+        type: Sequelize.STRING,
+        allowNull: false
       }
+
     });
   },
   async down(queryInterface, Sequelize) {

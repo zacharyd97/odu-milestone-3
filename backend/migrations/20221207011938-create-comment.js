@@ -9,14 +9,17 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      pageId: {
-        type: Sequelize.INTEGER
+      user_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false
       },
-      authorId: {
-        type: Sequelize.INTEGER
+      post_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false
       },
-      content: {
-        type: Sequelize.STRING
+      comment_text: {
+        type: Sequelize.STRING,
+        allowNull: false
       }
     });
   },
