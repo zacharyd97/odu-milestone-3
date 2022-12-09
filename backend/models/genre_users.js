@@ -14,11 +14,21 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Genre_Users.init({
-    genre_id: DataTypes.INTEGER,
-    user_id: DataTypes.INTEGER
+    genre_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    }
   }, {
     sequelize,
     modelName: 'Genre_Users',
+    tableName: 'genre_users',
+    timestamps: false
   });
   return Genre_Users;
 };
