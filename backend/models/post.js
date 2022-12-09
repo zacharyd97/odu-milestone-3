@@ -9,19 +9,40 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {
-      // define association here
+    static associate(User, Genre, Comment) {
+      Post.belongsTo(User, { as: 'user', foreignKey: 'user_id' })
+      Post.belongsTo(Genre, { as: 'genre', foreignKey: "genre_id" })
+      Post.hasMany(Comment, { as: "comment", foreignKey: "comment_id" })
     }
   }
   Post.init({
-    post_id: DataTypes.INTEGER,
-    user_id: DataTypes.INTEGER,
-    genre_id: DataTypes.INTEGER,
-    title: DataTypes.STRING,
-    post: DataTypes.STRING
+    post_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+      allowNull: false
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    genre_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    post_text: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   }, {
     sequelize,
     modelName: 'Post',
+    tableName: 'posts',
+    timestamps: false
   });
   return Post;
 };
