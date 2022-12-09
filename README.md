@@ -67,6 +67,8 @@ This project creates a social media app that uses music to connect like minded u
 |Thu. 12/15|         Submit completed project. Project presentations                              |
 ## Front-End Wireframe
 ![plot](./layout/Screenshot%202022-12-04%20113532.jpg)
+## Back-End ERD
+![plot](./layout/Milestone_3_ERD.png)
 # Outstanding Issues
 ## Bugs
 ## Unfinished Functionality
