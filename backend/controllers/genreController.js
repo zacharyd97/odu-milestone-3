@@ -20,7 +20,7 @@ router.post('/', async (req, res) => {
 
 // get genres
 router.get('/', async (req, res) => {
-    const genres = await Genre.findall()
+    const genres = await Genre.findAll()
     res.json(genres)
 })
 
