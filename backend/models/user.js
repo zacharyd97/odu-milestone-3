@@ -9,9 +9,9 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({ Comment, Genre }) {
+    static associate({ Comment, Genre, Genre_Users }) {
       User.hasMany(Comment, { as: 'comment', foreignKey: 'user_id' })
-      User.hasMany(Genre, { as: 'genre', foreignKey: "genre_id", through: Genre_Users })
+      User.belongsToMany(Genre, { as: 'genre', foreignKey: "genre_id", through: Genre_Users })
     }
 
   }

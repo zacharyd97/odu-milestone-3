@@ -11,6 +11,9 @@ app.use(express.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 
 app.use('/user', require('./controllers/userController'))
+app.use("/auth", require('./controllers/authentication'))
+
+
 
 app.listen(process.env.PORT, () => {
     console.log(`live on port:${process.env.PORT}`)
