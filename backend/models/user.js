@@ -2,7 +2,6 @@
 const {
   Model
 } = require('sequelize');
-const genre = require('./genre');
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     /**
