@@ -11,8 +11,8 @@ module.exports = {
       },
       genre_id: {
         allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
+        // autoIncrement: true,
+        // primaryKey: true,
         type: Sequelize.INTEGER
       },
     });
