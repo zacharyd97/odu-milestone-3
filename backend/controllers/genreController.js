@@ -32,7 +32,7 @@ router.get('/:genre_id', async (req, res) => {
     }
     else {
         const genre = await Genre.findOne({
-            where: { genre_id: genreID },
+            where: { genre_id: genreId },
             include: {
                 association: 'posts',
                 include: 'user'
