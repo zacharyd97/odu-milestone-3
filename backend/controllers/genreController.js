@@ -14,8 +14,8 @@ router.post('/', async (req, res) => {
     if (!req.body.description) {
         req.body.description = ''
     }
-    const genre = await Genre.create(req.body)
-    res.json(genre)
+    const genres = await Genre.create(req.body)
+    res.json(genres)
 })
 
 // get genres
