@@ -23,6 +23,10 @@ module.exports = {
       },
       image_url: {
         type: Sequelize.STRING
+      },
+      role: {
+        type: Sequelize.STRING,
+        allowNull: false
       }
     });
   },
