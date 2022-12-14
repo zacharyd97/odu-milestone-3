@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     user_id: {
       type: DataTypes.INTEGER,
-      primaryKey: true,
+      primaryKey: true
     }
   }, {
     sequelize,

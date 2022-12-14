@@ -1,23 +1,37 @@
 const router = require('express').Router()
 const db = require("../models")
-// const bcrypt = require('bcrypt') 
+const bcrypt = require('bcrypt') 
+const user = require('../models/user')
 
-// const { User } = db
+const { User } = db
 
-// router.post('/', async (req, res) => {
-//     let { password, ...rest } = req.body;
-//     const user = await User.create({ 
-//         ...rest,
-//         role: 'user',
-//         passwordDigest: await bcrypt.hash(password, 10)
-//     })
-//     res.json(user)
-// })
+router.get('/', async (req, res) => {
+    res.send('user endpoint')
+})
+
+router.post('/register', async (req, res) => {
+    
+    try{
+        let {user_password, ...rest} = req.body;
+        console.log(req.body)
+        console.log({user_password, ...rest})
+        const newUser = await User.create({
+            ...rest,
+            user_password: await bcrypt.hash(user_password,10)
+
+        
+        })
+        // console.log(newUser)
+        res.json(newUser)
+    } catch (err){
+        res.status(500).json(err)
+    }
+})
 
 
-// router.get('/', async (req, res) => {
-//     const users = await User.findAll()
-//     res.json(users)
-// })
+router.get('/', async (req, res) => {
+    const users = await User.findAll()
+    res.json(users)
+})
 
-// module.exports = router
+module.exports = router
