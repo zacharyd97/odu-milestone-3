@@ -84,7 +84,7 @@ router.delete('/genre_id', async (req, res) => {
             res.status(404).json({ message: `Invalid id "${genreId}"` })
         }
         else {
-            const genre = await genre.findOne({
+            const genre = await Genre.findOne({
                 where: { genre_id: genreId }
             })
             if (!genre) {
