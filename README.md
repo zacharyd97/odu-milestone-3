@@ -15,9 +15,26 @@ This project creates a social media app that uses music to connect like minded u
 ## Spotify API Documentation
 - https://developer.spotify.com/documentation/web-api/
 ## Back-End Documentation
-- Include ERD diagram
 
-## Route Table
+### Routes
+
+| METHOD | PATH                                  | PURPOSE                                        |
+| ------ | ----------------------------          | ---------------------------------------------- |
+| GET    | /                                     | HOME                                           |
+| GET    | /genres                               | GENRES PAGE                                    |
+| POST   | /genres                               | ADDS A GENRE                                   |
+| GET    | /genres/:genre_id                     | A GENRE PAGE                                   |
+| PUT    | /genres/:genre_id                     | EDITS A GENRE                                  |
+| DELETE | /genres/:genre_id                     | DELETES A GENRE                                |
+| POST   | /genres/:genre_id/posts               | POSTS USER POSTS TO THE GENRE PAGE             |
+| DELETE | /genres/:genre_id/posts/:post_id      | DELETES USER POSTS FROM THE GENRE PAGE         |
+| GET    | /posts                                | POSTS PAGE                                     |
+| POST   | /posts                                | ADDS A POST                                    |
+| GET    | /posts/:post_id                       | A POST PAGE                                    |
+| PUT    | /posts/:post_id                       | EDITS A POST                                   |
+| DELETE | /posts/:post_id                       | DELETES A POST                                 |
+| POST   | /posts/:post_id/comments              | POSTS USER COMMENTS TO THE POSTS PAGE          |
+| DELETE | /posts/:post_id/comments/:comment_id  | DELETES USER COMMENTS FROM THE POST PAGE       |
 
 # Requirements
 
