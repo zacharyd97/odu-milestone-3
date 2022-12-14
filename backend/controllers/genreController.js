@@ -14,8 +14,8 @@ router.post('/', async (req, res) => {
     if (!req.body.description) {
         req.body.description = ''
     }
-    const genre = await Genre.create(req.body)
-    res.json(genre)
+    const genres = await Genre.create(req.body)
+    res.json(genres)
 })
 
 // get genres
@@ -32,7 +32,7 @@ router.get('/:genre_id', async (req, res) => {
     }
     else {
         const genre = await Genre.findOne({
-            where: { genre_id: genreID },
+            where: { genre_id: genreId },
             include: {
                 association: 'posts',
                 include: 'user'
@@ -58,7 +58,7 @@ router.put('/:genre_id', async (req, res) => {
             res.status(404).json({ message: `Invalid id "${genreId}"` })
         }
         else {
-            const genre = await genre.findOne({
+            const genre = await Genre.findOne({
                 where: { genre_id: genreId }
             })
             if (!genre) {
@@ -84,7 +84,7 @@ router.delete('/genre_id', async (req, res) => {
             res.status(404).json({ message: `Invalid id "${genreId}"` })
         }
         else {
-            const genre = await genre.findOne({
+            const genre = await Genre.findOne({
                 where: { genre_id: genreId }
             })
             if (!genre) {
