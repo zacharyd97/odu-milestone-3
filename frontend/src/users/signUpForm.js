@@ -1,20 +1,23 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router";
+// const bcrypt = require('bcrypt')
 
 function SignUpForm() {
   const navigate = useNavigate();
 
   const [user, setUser] = useState({
-    firstName: "",
-    lastName: "",
+    user_id: '',
+    user_name: "",
+    user_password: "",
     email: "",
-    password: "",
+    image_url: "placeholder",
+    role :"user"
   });
 
   async function handleSubmit(e) {
     e.preventDefault();
 
-    await fetch(`http://localhost:5000/users/`, {
+    await fetch(`http://localhost:5000/user/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -22,13 +25,28 @@ function SignUpForm() {
       body: JSON.stringify(user),
     });
 
-    navigate.push(`/`);
+    navigate(`/`);
   }
 
   return (
     <main>
+      
       <h1>Sign Up</h1>
       <form onSubmit={handleSubmit}>
+        <div className="row">
+          <div className="col-sm-6 form-group">
+            <label htmlFor="user-name">User id</label>
+            <input
+              required
+              value={user.user_id}
+              onChange={(e) => setUser({ ...user, user_id: e.target.value })}
+              className="form-control"
+              id="firstName"
+              name="firstName"
+            />
+          </div>
+        </div>
+
         <div className="row">
           <div className="col-sm-6 form-group">
             <label htmlFor="user-name">User Name</label>
@@ -62,7 +80,7 @@ function SignUpForm() {
               type="password"
               required
               value={user.user_password}
-              onChange={(e) => setUser({ ...user, password: e.target.value })}
+              onChange={(e) => setUser({ ...user, user_password: e.target.value })}
               className="form-control"
               id="password"
               name="password"

@@ -9,13 +9,13 @@ function LoginForm() {
 
   const [credentials, setCredentials] = useState({
     email: "",
-    password: "",
+    user_password: "",
   });
 
   const [errorMessage, setErrorMessage] = useState(null);
 
   async function handleSubmit(e) {
-    const response = await fetch(`http://localhost:5000/authentication/`, {
+    const response = await fetch(`http://localhost:5000/auth/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -27,7 +27,7 @@ function LoginForm() {
 
     if (response.status === 200) {
       setCurrentUser(data.user);
-      navigate.push(`/`);
+      navigate(`/`);
     } else {
       setErrorMessage(data.message);
     }
@@ -62,9 +62,9 @@ function LoginForm() {
             <input
               type="password"
               required
-              value={credentials.password}
+              value={credentials.user_password}
               onChange={(e) =>
-                setCredentials({ ...credentials, password: e.target.value })
+                setCredentials({ ...credentials, user_password: e.target.value })
               }
               className="form-control"
               id="password"

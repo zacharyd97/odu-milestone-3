@@ -2,9 +2,6 @@
 import { useState, useEffect, useContext } from 'react'
 import { useNavigate } from "react-router";
 import { CurrentUser } from '../contexts/CurrentUser'
-import LoginForm from '../users/loginForm';
-import SignUpForm from '../users/signUpForm';
-
 
 function Navigation() {
 
@@ -15,12 +12,12 @@ function Navigation() {
     let loginActions = (
         <>
             <li style={{ float: 'right' }}>
-                <a href="#" onClick={() => navigate.push("/sign-up")}>
+                <a href="#" onClick={() => navigate("/sign-up")}>
                     Sign Up
                 </a>
             </li>
             <li style={{ float: 'right' }}>
-                <a href="#" onClick={() => navigate.push("/login")}>
+                <a href="#" onClick={() => navigate("/login")}>
                     Login
                 </a>
             </li>
@@ -45,17 +42,17 @@ function Navigation() {
             <nav>
                 <ul>
                     <li>
-                        <a href="#" onClick={() => navigate.push("/")}>
+                        <a href="#" onClick={() => navigate("/")}>
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="#" onClick={() => navigate.push("/places")}>
+                        <a href="#" onClick={() => navigate("/places")}>
                             Places
                         </a>
                     </li>
                     <li>
-                        <a href="#" onClick={() => navigate.push("/places/new")}>
+                        <a href="#" onClick={() => navigate("/places/new")}>
                             Add Place
                         </a>
                     </li>

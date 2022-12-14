@@ -1,11 +1,10 @@
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Home from "./components/Home"
-
+import Navigation from './components/Navigation';
 import CurrentUserProvider from './contexts/CurrentUser';
 import LoginForm from './users/loginForm';
-import SignUpForm from './users/signUpForm';
-
+import SignUpForm from './users/signUpForm'
 
 function App() {
 
@@ -14,12 +13,14 @@ function App() {
     <div className='App'>
       <CurrentUserProvider>
       <BrowserRouter>
-      <Navigation/>
+      <Navigation />
+      <SignUpForm/>
+      <LoginForm/>
         <div className='Display'>
           <Routes>
-            <Route exact path="/" component={<Home />} />
-            <Route exact path="/sign-up" component={<SignUpForm/>}/>
-            <Route exact path="/login" component={<LoginForm/>}/>
+            <Route path="/" element={ Home } />
+            <Route exact path="/sign-up" component={SignUpForm} />
+            <Route exact path="/login" component={LoginForm} />
           </Routes>
         </div>
       </BrowserRouter>
