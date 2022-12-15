@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router";
-// const bcrypt = require('bcrypt')
+
 
 function SignUpForm() {
   const navigate = useNavigate();
