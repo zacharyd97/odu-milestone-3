@@ -3,9 +3,18 @@ const express = require('express')
 const bodyParser = require("body-parser");
 const cors = require('cors')
 const app = express()
+const cookieSession = require('cookie-session')
 
 require('dotenv').config()
-app.use(cors())
+app.use(cookieSession({
+    name: 'session',
+    keys: [ process.env.SESSION_SECRET],
+    maxAge: 24 * 60 * 60 * 1000 // 1 day
+}))
+app.use(cors({
+    origin: 'http://localhost:3000',
+    credentials: true
+}))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(bodyParser.json());
