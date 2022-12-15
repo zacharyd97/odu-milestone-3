@@ -17,9 +17,10 @@ function NewGenreForm() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(place)
+            body: JSON.stringify(genre)
+            
         })
-
+        
         navigate.push('/genres')
     }
 

@@ -10,6 +10,7 @@ import NewGenreForm from './genres/NewGenreForm';
 import EditGenreForm from './genres/EditGenreForm';
 import PostPage from './posts/PostPage';
 import Error404 from './Error404';
+import GenrePage from './genres/GenrePage';
 
 function App() {
 
@@ -19,19 +20,17 @@ function App() {
       <CurrentUserProvider>
         <BrowserRouter>
           <Navigation />
-          <SignUpForm />
-          <LoginForm />
           <div className='Display'>
             <Routes>
-              <Route path="/" element={Home} />
-              <Route exact path="/sign-up" component={SignUpForm} />
-              <Route exact path="/login" component={LoginForm} />
-              <Route exact path="/genres" component={GenreIndex} />
-              <Route exact path="/genres/new" component={NewGenreForm} />
-              <Route exact path="/genres/:genre_id" component={GenrePage} />
-              <Route exact path="/genres/:genre_id/edit" component={EditGenreForm} />
-              <Route exact path="/posts/:post_id" component={PostPage} />
-              <Route path="/" component={Error404} />
+              <Route path="/" element={<Home/>} />
+              <Route exact path="/sign-up" element={<SignUpForm/>} />
+              <Route exact path="/login" element={<LoginForm/>} />
+              <Route exact path="/genres" element={<GenreIndex/>} />
+              <Route exact path="/genres/new" element={<NewGenreForm/>} />
+              <Route exact path="/genres/:genre_id" element={<GenrePage/>} />
+              <Route exact path="/genres/:genre_id/edit" element={<EditGenreForm/>} />
+              <Route exact path="/posts/:post_id" element={<PostPage/>} />
+              <Route path="/" element={<Error404/>} />
             </Routes>
           </div>
         </BrowserRouter>

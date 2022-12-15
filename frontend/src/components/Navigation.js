@@ -11,12 +11,12 @@ function Navigation() {
 
     let loginActions = (
         <>
-            <li style={{ float: 'right' }}>
+            <li style={{ }}>
                 <a href="#" onClick={() => navigate("/sign-up")}>
                     Sign Up
                 </a>
             </li>
-            <li style={{ float: 'right' }}>
+            <li style={{  }}>
                 <a href="#" onClick={() => navigate("/login")}>
                     Login
                 </a>
