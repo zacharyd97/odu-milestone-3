@@ -8,7 +8,7 @@ const cookieSession = require('cookie-session')
 require('dotenv').config()
 app.use(cookieSession({
     name: 'session',
-    keys: [ process.env.SESSION_SECRET],
+    keys: [process.env.SESSION_SECRET],
     maxAge: 24 * 60 * 60 * 1000 // 1 day
 }))
 app.use(cors({
