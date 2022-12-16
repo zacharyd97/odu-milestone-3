@@ -5,9 +5,9 @@ const { Genre, User, Post } = db
 
 // post new genre (admin only)
 router.post('/', async (req, res) => {
-    if (req.currentUser?.role !== 'admin') {
-        return res.status(403).json({ message: `You are not allowed to add a genre` })
-    }
+    // if (req.currentUser?.role !== 'admin') {
+    //     return res.status(403).json({ message: `You are not allowed to add a genre` })
+    // }
     if (!req.body.name) {
         req.body.name = 'New Genre'
     }

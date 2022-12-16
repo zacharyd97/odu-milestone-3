@@ -21,7 +21,7 @@ function NewGenreForm() {
             
         })
         
-        navigate.push('/genres')
+        navigate('/genres')
     }
 
     return (

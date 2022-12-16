@@ -1,9 +1,9 @@
 
 
 
-function PostPage () {
-    return(
-        <h1>Genre Page</h1>
+function PostPage() {
+    return (
+        <h1>Post Page</h1>
     )
 }
 

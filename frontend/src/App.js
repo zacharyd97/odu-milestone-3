@@ -22,15 +22,15 @@ function App() {
           <Navigation />
           <div className='Display'>
             <Routes>
-              <Route path="/" element={<Home/>} />
-              <Route exact path="/sign-up" element={<SignUpForm/>} />
-              <Route exact path="/login" element={<LoginForm/>} />
-              <Route exact path="/genres" element={<GenreIndex/>} />
-              <Route exact path="/genres/new" element={<NewGenreForm/>} />
-              <Route exact path="/genres/:genre_id" element={<GenrePage/>} />
-              <Route exact path="/genres/:genre_id/edit" element={<EditGenreForm/>} />
-              <Route exact path="/posts/:post_id" element={<PostPage/>} />
-              <Route path="/" element={<Error404/>} />
+              <Route path="/" element={<Home />} />
+              <Route exact path="/sign-up" element={<SignUpForm />} />
+              <Route exact path="/login" element={<LoginForm />} />
+              <Route exact path="/genres" element={<GenreIndex />} />
+              <Route exact path="/genres/new" element={<NewGenreForm />} />
+              <Route exact path="/genres/:genre_id" element={<GenrePage />} />
+              <Route exact path="/genres/:genre_id/edit" element={<EditGenreForm />} />
+              <Route exact path="/posts/:post_id" element={<PostPage />} />
+              <Route path="/" element={<Error404 />} />
             </Routes>
           </div>
         </BrowserRouter>
