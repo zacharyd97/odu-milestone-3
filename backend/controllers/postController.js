@@ -20,7 +20,7 @@ router.get('/:postId', async (req, res) => {
     } else {
         const post = await Post.findOne({
             where: { post_id: postId },
-            include: { model: Comment, as: "comments" }
+            include: { model: Comment, as: "comment" }
         })
         if (!post) {
             res.status(404).json({ message: `Could not find place with id "${postId}"` })

@@ -49,7 +49,8 @@ router.get('/:genre_id', async (req, res) => {
 
 // edit genre (admin only)
 router.put('/:genre_id', async (req, res) => {
-    if (req.currentUser?.role !== 'admin') {
+    if (req.currentUser.role !== 'admin') {
+        console.log(req.currentUser.role)
         return res.status(403).json({ message: `You are not allowed to edit genres` })
     }
     else {
