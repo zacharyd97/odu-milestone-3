@@ -10,19 +10,20 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     const post = await Post.create(req.body)
+    res.json(post)
 })
 
 router.get('/:postId', async (req, res) => {
-    let postId = Number(req.params.placeId)
+    let postId = Number(req.params.postId)
     if (isNaN(postId)) {
         res.status(404).json({ message: `Invalid id "${postId}"` })
     } else {
-        const post = await Place.findOne({
+        const post = await Post.findOne({
             where: { post_id: postId },
             include: { model: Comment, as: "comments" }
         })
         if (!post) {
-            res.status(404).json({ message: `Could not find place with id "${placeId}"` })
+            res.status(404).json({ message: `Could not find place with id "${postId}"` })
         } else {
             res.json(post)
         }
@@ -48,7 +49,7 @@ router.put('/:postId', async (req, res) => {
 })
 
 router.delete('/:postId', async (req, res) => {
-    let postId = Number(req.params.placeId)
+    let postId = Number(req.params.postId)
     if (isNaN(postId)) {
         res.status(404).json({ message: `Invalid id "${postId}"` })
     } else {
@@ -70,7 +71,7 @@ router.post('/:postId/comments', async (req, res) => {
     const postId = Number(req.params.postId)
 
     const post = await Post.findOne({
-        where: { place_id: placeId }
+        where: { post_id: postId }
     })
 
     if (!post) {
@@ -79,7 +80,7 @@ router.post('/:postId/comments', async (req, res) => {
 
     const comment = await Comment.create({
         ...req.body,
-        placeId: placeId
+        postId: postId
     })
 
     res.json(comment)
