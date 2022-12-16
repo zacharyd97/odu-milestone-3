@@ -32,7 +32,7 @@ function EditGenreForm() {
             body: JSON.stringify(genre)
         })
 
-        navigate.push(`/genres/${genre.genre_id}`)
+        navigate(`/genres/${genre.genre_id}`)
     }
 
     return (

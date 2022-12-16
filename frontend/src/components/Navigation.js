@@ -52,8 +52,8 @@ function Navigation() {
                         </a>
                     </li>
                     <li>
-                        <a href="#" onClick={() => navigate("/places/new")}>
-                            Add Place
+                        <a href="#" onClick={() => navigate("/genres/new")}>
+                            Add Genre
                         </a>
                     </li>
                     {loginActions}
