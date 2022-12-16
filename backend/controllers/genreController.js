@@ -120,7 +120,7 @@ router.post('/:genre_id/posts', async (req, res) => {
 
     res.send({
         ...post.tojson(),
-        user: req.currentUser
+        user_id: req.currentUser
     })
 })
 
