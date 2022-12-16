@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { CurrentUser } from "../contexts/CurrentUser";
 
-function PostCard() {
+function PostCard({ post, onDelete }) {
     const { currentUser } = useContext(CurrentUser)
 
     let deleteButton = null;
@@ -24,4 +24,4 @@ function PostCard() {
         </div>
     )
 }
-export default PostCard
+export default PostCard;

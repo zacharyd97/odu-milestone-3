@@ -54,4 +54,4 @@ function NewPostForm({ genre, onSubmit }) {
         </form>
     )
 }
-export default NewPostForm
+export default NewPostForm;

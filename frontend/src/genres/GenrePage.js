@@ -1,9 +1,8 @@
 import { useEffect, useState, useContext } from "react";
 import { useNavigate, useParams } from "react-router";
 import { CurrentUser } from "../contexts/CurrentUser";
-import { PostCard } from "../components/PostCard"
-
-
+import PostCard from "../components/PostCard"
+import NewPostForm from "../components/NewPostForm"
 
 
 function GenrePage() {
@@ -129,7 +128,7 @@ function GenrePage() {
             <h2>Make Post</h2>
             <NewPostForm
                 genre={genre}
-                onSubmit={createGenre}
+                onSubmit={createPost}
             />
         </main>
     )
