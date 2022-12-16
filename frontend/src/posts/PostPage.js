@@ -6,7 +6,7 @@ function PostPage(post_id) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(`http://localhost:5000/post/${1}`)
+            const response = await fetch(`http://localhost:5000/posts/${1}`)
             const resData = await response.json()
             setPost(resData)
         }
