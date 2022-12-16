@@ -22,6 +22,7 @@ app.use(bodyParser.json());
 app.use('/user', require('./controllers/userController'))
 app.use("/auth", require('./controllers/authentication'))
 app.use('/genres', require('./controllers/genreController'))
+app.use('/posts', require('./controllers/postController'))
 
 app.listen(process.env.PORT, () => {
     console.log(`live on port:${process.env.PORT}`)

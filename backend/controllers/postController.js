@@ -5,7 +5,7 @@ const { Post, Comment } = db
 
 router.get('/', async (req, res) => {
     const posts = await Post.findAll()
-    res.json(places)
+    res.json(posts)
 })
 
 router.post('/', async (req, res) => {
