@@ -20,8 +20,8 @@ function Home(data) {
     let postsMap = posts.map((post) => {
         return(
             <div>
-                {post.title}
-                {post.text}
+                <h2>{post.title}</h2>
+                <p>{post.post_text}</p>
             </div>
         )
     });
@@ -30,18 +30,19 @@ function Home(data) {
     return (
         <main>
             <h1>Home Page</h1>
-            {postsMap}
-            {/* <section>
+            
+            <section>
                 <div>
                     <h2>Friends</h2>
                 </div>
                 <div>
                     <h2>Main Feed</h2>
+                    {postsMap}
                 </div>
                 <div>
                     <h2>Chats</h2>
                 </div>
-            </section> */}
+            </section>
         </main>
     )
 }
