@@ -3,19 +3,35 @@ import { CurrentUser } from "../contexts/CurrentUser"
 
 function NewPostForm({ genre, onSubmit }) {
     const { currentUser } = useContext(CurrentUser)
-
+    const [error, setError] = useState(null)
     const [post, setPost] = useState({
         title: '',
         post_text: ''
     })
 
-    function handleSubmit(e) {
-        e.preventDefault()
-        onSubmit(post)
-        setPost({
-            title: '',
-            post_text: ''
-        })
+    async function handleSubmit(e) {
+        e.preventDefault();
+    
+        // Form validation
+        if (!post.title || !post.post_text) {
+            console.log('Form validation failed');
+            setError('Title and text are required');
+            return;
+        }
+    
+        try {
+            await onSubmit(post);
+            // Post was successfully created, reset the form and clear any error
+            setPost({
+                title: '',
+                post_text: ''
+            });
+            setError(null);
+        } catch (error) {
+            // There was an error, set the error state
+            console.log('onSubmit threw an error', error);
+            setError('An error occurred while creating the post');
+        }
     }
 
     if (!currentUser) {

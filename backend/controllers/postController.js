@@ -10,8 +10,11 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     const post = await Post.create(req.body)
-    res.json(post)
-})
+        if (!post) {
+            return res.status(500).json({ message: `Could not create post` })
+        }
+        res.json(post)
+    })
 
 router.get('/:postId', async (req, res) => {
     let postId = Number(req.params.postId)

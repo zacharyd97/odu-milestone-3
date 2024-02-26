@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 // import { useNavigate } from "react-router-dom"
-
+import NewPostForm from "./NewPostForm"
 function Home(data) {
 
     // const navigate = useNavigate()
@@ -31,17 +31,19 @@ function Home(data) {
         <main>
             <h1>Home Page</h1>
             
+            
             <section>
                 <div>
                     <h2>Friends</h2>
                 </div>
                 <div>
-                    <h2>Main Feed</h2>
-                    {postsMap}
-                </div>
-                <div>
+                <h2>Main Feed</h2>
+                <NewPostForm />
+                {postsMap}
+                    </div>
+                {/* <div>
                     <h2>Chats</h2>
-                </div>
+                </div> */}
             </section>
         </main>
     )
