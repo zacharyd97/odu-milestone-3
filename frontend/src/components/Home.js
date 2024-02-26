@@ -17,9 +17,9 @@ function Home(data) {
     }, [])
 
     // let posts = data.posts
-    let postsMap = posts.map((post) => {
+    let postsMap = posts.map((post,index) => {
         return(
-            <div>
+            <div key= {index}>
                 <h2>{post.title}</h2>
                 <p>{post.post_text}</p>
             </div>

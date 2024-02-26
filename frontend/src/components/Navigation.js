@@ -24,7 +24,7 @@ function Navigation() {
         </>
     )
 
-    if (currentUser) {
+    if (currentUser && currentUser.user_name){
         loginActions = (
             <li style={{ float: 'right' }}>
                 Logged in as {currentUser.user_name}
@@ -36,7 +36,7 @@ function Navigation() {
     return (
         <div>
             <div>{loginActions}</div>
-            <img style={{ borderRadius: '50px' }} src={currentUser.image_url} alt="profile pic" /> 
+            {currentUser && <img style={{ borderRadius: '50px' }} src={currentUser.image_url} alt="profile pic" />} 
             <nav>
                 <ul>
                     <li>
